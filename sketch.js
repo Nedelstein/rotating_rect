@@ -1,6 +1,4 @@
 
-
-
 function setup() {
     createCanvas(windowWidth, windowHeight);
     document.body.style.margin="0px";
@@ -19,10 +17,10 @@ function setup() {
         rectMode(CENTER);
         translate(o1, o2);
         let d = dist(mouseX, mouseY, o1, o2);
-        let dConstrained = constrain(d, 0, 100);
+        let dConstrained = constrain(d, 0, 80);
         let rotation = frameCount * 0.02 * (dConstrained * 0.005);
         rotate(rotation);
-        rect(0, 0, size, size * 1.5,3);
+        rect(0, 0, (dConstrained / 2.5), (dConstrained * 1.5)/2.5,3);
         pop();
       }
     }
